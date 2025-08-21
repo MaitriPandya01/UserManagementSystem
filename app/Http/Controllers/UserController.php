@@ -20,6 +20,7 @@ class UserController extends Controller
 
     public function index()
     {
+        //This is listing page
         return view('users.index');
     }
 
@@ -35,7 +36,6 @@ class UserController extends Controller
 
     public function store(StoreUserRequest $request)
     {
-        // dd($request);
         $this->service->createUser($request->validated());
         return redirect()->back()->with('success', 'User created successfully.');
     }
