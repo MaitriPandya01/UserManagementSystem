@@ -42,7 +42,6 @@ class UserController extends Controller
 
     public function delete($id)
     {
-        // dd($id);
         $this->service->deleteUser((int)$id);
         return response()->json(['success' => true,'message' => 'Row deleted successfully !!!']);
     }
