@@ -30,6 +30,6 @@ class UserBO
             'created_at' => $user->created_at->format('d-M-Y'), // or any format you want
         ];
         });
-        return $data->toArray();
+        return $data->toArray(); // Add toArray for get data in array form
     }
 }
